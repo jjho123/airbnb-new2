@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'airbnb-new2';
+  componentTitle = "I am app component.ts";
+
+  clickHandler() {
+    alert("i am clicked");
+  }
 }

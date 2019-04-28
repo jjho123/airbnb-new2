@@ -16,17 +16,23 @@
             "outputPath": "dist/airbnb-new2",
             "index": "src/index.html",
             "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
+            "polyfills": "src/polyfills.ts",             
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "./src/styles"  
+              ]    
+            },              
             "scripts": [],
-            "es5BrowserSupport": true
+            "es5BrowserSupport": true           
           },
           "configurations": {
             "production": {
@@ -35,7 +41,7 @@
                   "replace": "src/environments/environment.ts",
                   "with": "src/environments/environment.prod.ts"
                 }
-              ],
+              ],                         
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
