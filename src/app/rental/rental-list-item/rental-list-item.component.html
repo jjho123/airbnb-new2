@@ -1,0 +1,13 @@
+<a routerLink="/rentals/{{rental_item.id}}">
+  <div class="card bwm-card">
+      <img class="card-img-top" src="{{ rental_item.image }}" alt="">
+      <div class="card-block">
+        <h6 class="card-subtitle">{{ rental_item.category }}
+          {{ rental_item.shared ? 'Shared' : 'Whole'}} 
+          {{ rental_item.category }} &#183; {{ rental_item.city }}
+        </h6>
+        <h4 class="card-title">{{ rental_item.title }}</h4>
+        <p class="card-text">${{ rental_item.dailyRate }} per night &#183; Free Cancelation</p>
+      </div>
+  </div>
+</a>
